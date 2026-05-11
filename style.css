@@ -625,8 +625,40 @@ p  { color: var(--c-muted); }
 .form__group textarea { resize: vertical; min-height: 110px; }
 .form__disclaimer { text-align: center; font-size: 0.78rem; color: var(--c-muted); margin-top: -8px; }
 .form__result { text-align: center; font-size: 0.9rem; min-height: 1.4em; }
-.form__result--success { color: #2e7d32; }
-.form__result--error   { color: #c62828; }
+.form__result--error { color: var(--c-danger); }
+
+/* Modal */
+.modal { position: fixed; inset: 0; z-index: 200; display: flex; align-items: center; justify-content: center; }
+.modal[hidden] { display: none; }
+.modal__backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); }
+.modal__box {
+  position: relative;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 48px 40px;
+  max-width: 420px;
+  width: calc(100% - 40px);
+  text-align: center;
+  animation: modal-in .2s ease;
+}
+.modal__icon {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: var(--c-accent);
+  color: var(--c-bg);
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 56px;
+  margin: 0 auto 24px;
+}
+.modal__box h3 { color: var(--c-text); margin-bottom: 12px; }
+.modal__box p  { margin-bottom: 32px; }
+@keyframes modal-in {
+  from { opacity: 0; transform: scale(0.95) translateY(12px); }
+  to   { opacity: 1; transform: none; }
+}
 
 /* ---------- Footer ---------- */
 .footer { background: var(--c-bg2); border-top: 1px solid var(--c-border); padding: 48px 0 24px; }
