@@ -371,6 +371,9 @@
           </div>
         </div>
         <form class="form" id="contactForm">
+          <input type="hidden" name="access_key" value="c8e50c54-6913-44a9-99f2-764868d9a5e9" />
+          <input type="hidden" name="subject" value="Ny bokningsförfrågan – EUC Stockholm" />
+          <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off" />
           <div class="form__row">
             <div class="form__group">
               <label for="name">Namn *</label>
@@ -406,6 +409,7 @@
             <textarea id="message" name="message" rows="4" placeholder="Önskade datum, frågor, eller annat ni vill berätta…"></textarea>
           </div>
           <button type="submit" class="btn btn--primary btn--full btn--lg">Skicka bokningsförfrågan</button>
+          <p id="formResult" class="form__result" aria-live="polite"></p>
           <p class="form__disclaimer">
             Alla deltagare signerar en ansvarsfriskrivning vid ankomst.
           </p>

@@ -43,36 +43,43 @@ document.querySelectorAll(
   observer.observe(el);
 });
 
-// ----- Contact form → mailto -----
-// UPDATE EMAIL: Change the address below when you have your eucstockholm.com email.
+// ----- Contact form → Web3Forms -----
 const CONTACT_EMAIL = 'peter.jaaskelainen@gmail.com';
 
-const form = document.getElementById('contactForm');
-form.addEventListener('submit', e => {
+const form       = document.getElementById('contactForm');
+const submitBtn  = form.querySelector('[type="submit"]');
+const formResult = document.getElementById('formResult');
+
+form.addEventListener('submit', async e => {
   e.preventDefault();
 
-  const name         = form.name.value.trim();
-  const company      = form.company.value.trim();
-  const email        = form.email.value.trim();
-  const phone        = form.phone.value.trim();
-  const participants = form.participants.value;
-  const message      = form.message.value.trim();
+  submitBtn.disabled     = true;
+  submitBtn.textContent  = 'Skickar…';
+  formResult.textContent = '';
+  formResult.className   = 'form__result';
 
-  const subject = encodeURIComponent(`Bokningsförfrågan – EUC Stockholm (${name})`);
+  const data = Object.fromEntries(new FormData(form));
 
-  const body = encodeURIComponent(
-`Ny bokningsförfrågan från eucstockholm.com
+  try {
+    const res  = await fetch('https://api.web3forms.com/submit', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body:    JSON.stringify(data),
+    });
+    const json = await res.json();
 
-Namn:           ${name}
-Företag:        ${company || '–'}
-E-post:         ${email}
-Telefon:        ${phone || '–'}
-Antal deltagare: ${participants}
-
-Meddelande:
-${message || '–'}
-`
-  );
-
-  window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+    if (res.ok && json.success) {
+      formResult.textContent = 'Tack! Vi hör av oss inom 24 timmar.';
+      formResult.classList.add('form__result--success');
+      form.reset();
+    } else {
+      throw new Error(json.message || 'Okänt fel');
+    }
+  } catch {
+    formResult.textContent = `Något gick fel – maila oss direkt på ${CONTACT_EMAIL}`;
+    formResult.classList.add('form__result--error');
+  } finally {
+    submitBtn.disabled    = false;
+    submitBtn.textContent = 'Skicka bokningsförfrågan';
+  }
 });
