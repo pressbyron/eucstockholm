@@ -46,15 +46,30 @@ document.querySelectorAll(
 // ----- Contact form → Web3Forms -----
 const CONTACT_EMAIL = 'peter.jaaskelainen@gmail.com';
 
-const form       = document.getElementById('contactForm');
-const submitBtn  = form.querySelector('[type="submit"]');
-const formResult = document.getElementById('formResult');
+const form        = document.getElementById('contactForm');
+const submitBtn   = form.querySelector('[type="submit"]');
+const formResult  = document.getElementById('formResult');
+const modal       = document.getElementById('successModal');
+const modalClose  = document.getElementById('modalClose');
+
+function openModal() {
+  modal.hidden = false;
+  modalClose.focus();
+}
+function closeModal() {
+  modal.hidden = true;
+  submitBtn.focus();
+}
+
+modalClose.addEventListener('click', closeModal);
+modal.querySelector('.modal__backdrop').addEventListener('click', closeModal);
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && !modal.hidden) closeModal(); });
 
 form.addEventListener('submit', async e => {
   e.preventDefault();
 
-  submitBtn.disabled     = true;
-  submitBtn.textContent  = 'Skickar…';
+  submitBtn.disabled    = true;
+  submitBtn.textContent = 'Skickar…';
   formResult.textContent = '';
   formResult.className   = 'form__result';
 
@@ -69,9 +84,8 @@ form.addEventListener('submit', async e => {
     const json = await res.json();
 
     if (res.ok && json.success) {
-      formResult.textContent = 'Tack! Vi hör av oss inom 24 timmar.';
-      formResult.classList.add('form__result--success');
       form.reset();
+      openModal();
     } else {
       throw new Error(json.message || 'Okänt fel');
     }
