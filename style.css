@@ -506,7 +506,8 @@ p  { color: var(--c-muted); }
   border-radius: 9999px;
   margin-bottom: 24px;
 }
-.pricing__amount { display: flex; align-items: baseline; gap: 8px; margin-bottom: 8px; }
+.pricing__amount { display: flex; align-items: baseline; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.pricing__prefix { font-size: 1rem; color: var(--c-muted); font-weight: 500; align-self: center; }
 .pricing__price {
   font-family: var(--font-display);
   font-size: 4.5rem;
