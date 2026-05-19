@@ -520,6 +520,7 @@ p  { color: var(--c-muted); }
 .pricing__details p { font-size: 0.9rem; color: var(--c-muted); margin-bottom: 4px; }
 .pricing__details strong { color: var(--c-text); }
 .pricing__extra { color: var(--c-accent) !important; font-weight: 600; }
+.pricing__vat { font-size: 0.8rem; color: var(--c-muted); margin-top: -8px; margin-bottom: 16px; }
 .pricing__aside {
   background: var(--c-bg3);
   border: 1px solid var(--c-border);
