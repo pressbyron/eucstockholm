@@ -55,7 +55,7 @@ updated manually to match any new per-person price × group size.
 
 - **Price:** 1 250 SEK/person
 - **Group size:** 4–6 people
-- **Duration:** 2.5 hours
+- **Duration:** 2 hours
 - **Included:** protective gear, soda & snacks, instructor
 - **Location:** south of Stockholm (Älvsjö area) — TBD
 - **Language:** Swedish throughout
