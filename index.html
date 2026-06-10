@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EUC Stockholm – Elektrisk enhjuling för företag</title>
-  <meta name="description" content="Unik teambuilding i Stockholm – kör elektrisk enhjuling, utmana dig själv och era kollegor. 2 h upplevelse söder om Stockholm. Boka nu!" />
+  <title>EUC Stockholm – Elektrisk enhjuling · Privatlektioner &amp; Företagsevent</title>
+  <meta name="description" content="Lär dig köra elektrisk enhjuling 1-mot-1 i Tullinge, eller boka ett unikt teambuildingevent för ditt företag söder om Stockholm." />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-2XGD5QVBBJ"></script>
@@ -24,8 +24,8 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://eucstockholm.se/" />
-  <meta property="og:title" content="EUC Stockholm – Elektrisk enhjuling för företag" />
-  <meta property="og:description" content="Unik teambuilding i Stockholm – kör elektrisk enhjuling, utmana dig själv och era kollegor. 2 h upplevelse söder om Stockholm. Boka nu!" />
+  <meta property="og:title" content="EUC Stockholm – Elektrisk enhjuling · Privatlektioner &amp; Företagsevent" />
+  <meta property="og:description" content="Lär dig köra elektrisk enhjuling 1-mot-1 i Tullinge, eller boka ett unikt teambuildingevent för ditt företag söder om Stockholm." />
   <meta property="og:locale" content="sv_SE" />
 
   <!-- Structured data -->
@@ -34,10 +34,10 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "EUC Stockholm",
-    "description": "Teambuilding med elektrisk enhjuling för företag söder om Stockholm.",
+    "description": "Privatlektioner och teambuilding med elektrisk enhjuling i Stockholmsområdet.",
     "url": "https://eucstockholm.se/",
     "areaServed": "Stockholm",
-    "priceRange": "1250 SEK/person",
+    "priceRange": "499–1250 SEK",
     "inLanguage": "sv"
   }
   </script>
@@ -48,7 +48,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 </head>
-<body>
+<body data-mode="privat">
 
   <!-- ========== NAV ========== -->
   <nav class="nav" id="nav">
@@ -75,42 +75,92 @@
     <div class="hero__bg"></div>
     <div class="hero__content container">
       <div class="hero__left">
-        <span class="hero__eyebrow">Teambuilding i Stockholm</span>
-        <h1 class="hero__title">Elektrisk enhjuling.<br />Svårt. Äkta.<br />Oförglömligt.</h1>
-        <p class="hero__sub">
-          Utmana era gränser på en elektrisk enhjuling – en upplevelse som ger skratt,
-          svett och riktigt lagarbete. Perfekt för företag som vill ha något
-          utöver det vanliga.
-        </p>
-        <div class="hero__actions">
-          <a href="#kontakt" class="btn btn--primary btn--lg">Boka er plats</a>
-          <a href="#om" class="btn btn--ghost btn--lg">Läs mer</a>
+
+        <!-- Mode tabs -->
+        <div class="mode-tabs" role="tablist" aria-label="Typ av upplevelse">
+          <button class="mode-tab active" data-tab="privat" role="tab" aria-selected="true">
+            <i class="fi fi-rr-user" aria-hidden="true"></i> Privatlektioner
+          </button>
+          <button class="mode-tab" data-tab="foretag" role="tab" aria-selected="false">
+            <i class="fi fi-rr-building" aria-hidden="true"></i> Företagsevent
+          </button>
         </div>
-        <div class="stats-bar">
-          <div class="stat-item">
-            <span class="stat-val">2 H</span>
-            <span class="stat-label">Session</span>
+
+        <!-- Hero: Privat -->
+        <div data-mode="privat">
+          <span class="hero__eyebrow">Privatlektioner · Tullinge</span>
+          <h1 class="hero__title">Lär dig köra.<br />1-mot-1.<br />Utomhus.</h1>
+          <p class="hero__sub">
+            60 minuter helt dedikerad tid med instruktör utomhus i Tullinge.
+            Du fokuserar bara på att lära dig – jag tar hand om allt annat.
+          </p>
+          <div class="hero__actions">
+            <a href="#kontakt" class="btn btn--primary btn--lg">Boka en lektion</a>
+            <a href="#om" class="btn btn--ghost btn--lg">Läs mer</a>
           </div>
-          <span class="stat-sep" aria-hidden="true"></span>
-          <div class="stat-item">
-            <span class="stat-val">4–6</span>
-            <span class="stat-label">Deltagare</span>
-          </div>
-          <span class="stat-sep" aria-hidden="true"></span>
-          <div class="stat-item">
-            <span class="stat-val">från 7 000 kr</span>
-            <span class="stat-label">per event</span>
-          </div>
-          <span class="stat-sep" aria-hidden="true"></span>
-          <div class="stat-item">
-            <i class="fi fi-rr-shield stat-icon" aria-hidden="true"></i>
-            <span class="stat-label">Skyddad</span>
+          <div class="stats-bar">
+            <div class="stat-item">
+              <span class="stat-val">60 MIN</span>
+              <span class="stat-label">Lektion</span>
+            </div>
+            <span class="stat-sep" aria-hidden="true"></span>
+            <div class="stat-item">
+              <span class="stat-val">1-1</span>
+              <span class="stat-label">Format</span>
+            </div>
+            <span class="stat-sep" aria-hidden="true"></span>
+            <div class="stat-item">
+              <span class="stat-val campaign-price">499 <span class="stat-old">699</span></span>
+              <span class="stat-label">kr/h · lansering</span>
+            </div>
+            <span class="stat-sep" aria-hidden="true"></span>
+            <div class="stat-item">
+              <i class="fi fi-rr-leaf stat-icon" aria-hidden="true"></i>
+              <span class="stat-label">Utomhus</span>
+            </div>
           </div>
         </div>
+
+        <!-- Hero: Företag -->
+        <div data-mode="foretag">
+          <span class="hero__eyebrow">Teambuilding i Stockholm</span>
+          <h1 class="hero__title">Elektrisk enhjuling.<br />Svårt. Äkta.<br />Oförglömligt.</h1>
+          <p class="hero__sub">
+            Utmana era gränser på en elektrisk enhjuling – en upplevelse som ger skratt,
+            svett och riktigt lagarbete. Perfekt för företag som vill ha något
+            utöver det vanliga.
+          </p>
+          <div class="hero__actions">
+            <a href="#kontakt" class="btn btn--primary btn--lg">Boka er plats</a>
+            <a href="#om" class="btn btn--ghost btn--lg">Läs mer</a>
+          </div>
+          <div class="stats-bar">
+            <div class="stat-item">
+              <span class="stat-val">2 H</span>
+              <span class="stat-label">Session</span>
+            </div>
+            <span class="stat-sep" aria-hidden="true"></span>
+            <div class="stat-item">
+              <span class="stat-val">4–6</span>
+              <span class="stat-label">Deltagare</span>
+            </div>
+            <span class="stat-sep" aria-hidden="true"></span>
+            <div class="stat-item">
+              <span class="stat-val">från 7 000 kr</span>
+              <span class="stat-label">per event</span>
+            </div>
+            <span class="stat-sep" aria-hidden="true"></span>
+            <div class="stat-item">
+              <i class="fi fi-rr-shield stat-icon" aria-hidden="true"></i>
+              <span class="stat-label">Skyddad</span>
+            </div>
+          </div>
+        </div>
+
       </div>
       <div class="hero__right">
         <div class="hero__img-wrap">
-          <img src="images/euc_hero.png" alt="Teambuilding på elektrisk enhjuling i Stockholm" />
+          <img src="images/euc_hero.png" alt="Elektrisk enhjuling i Stockholm" />
         </div>
       </div>
     </div>
@@ -127,93 +177,169 @@
       <span>OFÖRGLÖMLIGT</span><span class="sep">·</span>
       <span>ELEKTRISK ENHJULING</span><span class="sep">·</span>
       <span>STOCKHOLM</span><span class="sep">·</span>
-      <span>TEAMBUILDING</span><span class="sep">·</span>
+      <span>TULLINGE</span><span class="sep">·</span>
       <span>SVÅRT</span><span class="sep">·</span>
       <span>ÄKTA</span><span class="sep">·</span>
       <span>OFÖRGLÖMLIGT</span><span class="sep">·</span>
       <span>ELEKTRISK ENHJULING</span><span class="sep">·</span>
       <span>STOCKHOLM</span><span class="sep">·</span>
-      <span>TEAMBUILDING</span><span class="sep">·</span>
+      <span>TULLINGE</span><span class="sep">·</span>
     </div>
   </div>
 
   <!-- ========== OM ========== -->
   <section class="section om" id="om">
     <div class="container">
-      <div class="section__header">
-        <span class="section__eyebrow">Vad är EUC?</span>
-        <h2>Det är svårt – och det är hela poängen</h2>
-        <p>
-          En elektrisk enhjuling (EUC – Electric Unicycle) är ett elfordon med ett hjul
-          som styrs enbart med kroppen. Det tar minuter att börja röra sig
-          och timmar att bli bekväm. Det är precis det som gör det perfekt
-          för teambuilding.
-        </p>
-      </div>
 
-      <div class="feat-list">
-        <div class="feat-item">
-          <span class="feat-num">01</span>
-          <div class="feat-body">
-            <i class="fi fi-rr-target feat-icon"></i>
-            <h3>Riktig utmaning</h3>
-            <p>
-              Vi lovar att det kommer vara svårt. Den känslan – att kämpa
-              med något nytt – är motorn i upplevelsen. Alla börjar på
-              samma nivå.
-            </p>
-          </div>
-        </div>
-        <div class="feat-item">
-          <span class="feat-num">02</span>
-          <div class="feat-body">
-            <i class="fi fi-rr-handshake feat-icon"></i>
-            <h3>Lagarbete på riktigt</h3>
-            <p>
-              Ni arbetar i par och hjälper varandra. Att hålla upp en kollega
-              som vacklar skapar en kontakt som inte går att köpa på en
-              After Work.
-            </p>
-          </div>
-        </div>
-        <div class="feat-item">
-          <span class="feat-num">03</span>
-          <div class="feat-body">
-            <i class="fi fi-rr-chart-line-up feat-icon"></i>
-            <h3>Snabb framgång</h3>
-            <p>
-              Progessen är märkbar och snabb. Att ta sina första egna steg
-              på hjulet ger en genuin känsla av prestation – som ett lag.
-            </p>
-          </div>
-        </div>
-        <div class="feat-item">
-          <span class="feat-num">04</span>
-          <div class="feat-body">
-            <i class="fi fi-rr-camera feat-icon"></i>
-            <h3>Minnen för livet</h3>
-            <p>
-              Kombinationen av skratt, stöd och motgångar gör att ni kommer
-              prata om den här dagen långt efter att ni lämnat lokalen.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="honest-box">
-        <div class="honest-box__icon"><i class="fi fi-rr-info"></i></div>
-        <div class="honest-box__text">
-          <strong>Ärlighet framför allt</strong>
+      <!-- Om: Privat -->
+      <div data-mode="privat">
+        <div class="section__header">
+          <span class="section__eyebrow">Vad är EUC?</span>
+          <h2>Svårt, roligt, och du lär dig snabbare än du tror</h2>
           <p>
-            Att lära sig köra elektrisk enhjuling kan ge lite ömma fötter och ben –
-            ibland även ett blåmärke. Det är en del av lärandet.
-            Alla deltagare får fullständig skyddsutrustning och
-            noggrann introduktion, och alla skriver på en
-            ansvarsfriskrivning vid ankomst. Vi tar er säkerhet på
-            fullaste allvar, men vill att ni vet vad ni ger er in på.
+            En elektrisk enhjuling styrs enbart med kroppen – inga handtag, inga pedaler.
+            Med en instruktör som fokuserar helt på dig tar du dina första egna steg
+            mycket snabbare än på egen hand.
           </p>
         </div>
+        <div class="feat-list">
+          <div class="feat-item">
+            <span class="feat-num">01</span>
+            <div class="feat-body">
+              <i class="fi fi-rr-user feat-icon"></i>
+              <h3>100% dedikerad instruktör</h3>
+              <p>
+                Hela lektionen är din. Inget att dela med andra, ingen köar för hjulet.
+                Jag anpassar tempot och tekniken helt efter dig.
+              </p>
+            </div>
+          </div>
+          <div class="feat-item">
+            <span class="feat-num">02</span>
+            <div class="feat-body">
+              <i class="fi fi-rr-chart-line-up feat-icon"></i>
+              <h3>Snabb och märkbar progress</h3>
+              <p>
+                1-mot-1 innebär att du får omedelbar feedback och korrektioner i realtid.
+                Många åker självständigt redan under första lektionen.
+              </p>
+            </div>
+          </div>
+          <div class="feat-item">
+            <span class="feat-num">03</span>
+            <div class="feat-body">
+              <i class="fi fi-rr-leaf feat-icon"></i>
+              <h3>Utomhus i Tullinge</h3>
+              <p>
+                Vi kör på en öppen utomhusplats i Tullinge söder om Stockholm.
+                Exakt plats kommuniceras när bokningen bekräftas.
+              </p>
+            </div>
+          </div>
+          <div class="feat-item">
+            <span class="feat-num">04</span>
+            <div class="feat-body">
+              <i class="fi fi-rr-target feat-icon"></i>
+              <h3>Riktig utmaning</h3>
+              <p>
+                Vi lovar att det kommer vara svårt i början – och det är precis det som gör
+                det så belönande. Känslan när det klickar är oöverträffad.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="honest-box">
+          <div class="honest-box__icon"><i class="fi fi-rr-info"></i></div>
+          <div class="honest-box__text">
+            <strong>Ärlighet framför allt</strong>
+            <p>
+              Att lära sig köra elektrisk enhjuling kan ge lite ömma fötter och ben –
+              ibland även ett blåmärke. Det är en del av lärandet.
+              Du får fullständig skyddsutrustning och noggrann introduktion,
+              och skriver på en ansvarsfriskrivning vid ankomst.
+              Om det regnar på bokat datum ställs lektionen in och vi bokar om den utan
+              extra kostnad.
+            </p>
+          </div>
+        </div>
       </div>
+
+      <!-- Om: Företag -->
+      <div data-mode="foretag">
+        <div class="section__header">
+          <span class="section__eyebrow">Vad är EUC?</span>
+          <h2>Det är svårt – och det är hela poängen</h2>
+          <p>
+            En elektrisk enhjuling (EUC – Electric Unicycle) är ett elfordon med ett hjul
+            som styrs enbart med kroppen. Det tar minuter att börja röra sig
+            och timmar att bli bekväm. Det är precis det som gör det perfekt
+            för teambuilding.
+          </p>
+        </div>
+        <div class="feat-list">
+          <div class="feat-item">
+            <span class="feat-num">01</span>
+            <div class="feat-body">
+              <i class="fi fi-rr-target feat-icon"></i>
+              <h3>Riktig utmaning</h3>
+              <p>
+                Vi lovar att det kommer vara svårt. Den känslan – att kämpa
+                med något nytt – är motorn i upplevelsen. Alla börjar på
+                samma nivå.
+              </p>
+            </div>
+          </div>
+          <div class="feat-item">
+            <span class="feat-num">02</span>
+            <div class="feat-body">
+              <i class="fi fi-rr-handshake feat-icon"></i>
+              <h3>Lagarbete på riktigt</h3>
+              <p>
+                Ni arbetar i par och hjälper varandra. Att hålla upp en kollega
+                som vacklar skapar en kontakt som inte går att köpa på en
+                After Work.
+              </p>
+            </div>
+          </div>
+          <div class="feat-item">
+            <span class="feat-num">03</span>
+            <div class="feat-body">
+              <i class="fi fi-rr-chart-line-up feat-icon"></i>
+              <h3>Snabb framgång</h3>
+              <p>
+                Progessen är märkbar och snabb. Att ta sina första egna steg
+                på hjulet ger en genuin känsla av prestation – som ett lag.
+              </p>
+            </div>
+          </div>
+          <div class="feat-item">
+            <span class="feat-num">04</span>
+            <div class="feat-body">
+              <i class="fi fi-rr-camera feat-icon"></i>
+              <h3>Minnen för livet</h3>
+              <p>
+                Kombinationen av skratt, stöd och motgångar gör att ni kommer
+                prata om den här dagen långt efter att ni lämnat lokalen.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="honest-box">
+          <div class="honest-box__icon"><i class="fi fi-rr-info"></i></div>
+          <div class="honest-box__text">
+            <strong>Ärlighet framför allt</strong>
+            <p>
+              Att lära sig köra elektrisk enhjuling kan ge lite ömma fötter och ben –
+              ibland även ett blåmärke. Det är en del av lärandet.
+              Alla deltagare får fullständig skyddsutrustning och
+              noggrann introduktion, och alla skriver på en
+              ansvarsfriskrivning vid ankomst. Vi tar er säkerhet på
+              fullaste allvar, men vill att ni vet vad ni ger er in på.
+            </p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -221,7 +347,23 @@
   <section class="section included" id="inkluderat">
     <div class="container">
       <div class="included__grid">
-        <div class="included__text">
+
+        <!-- Included: Privat -->
+        <div class="included__text" data-mode="privat">
+          <span class="section__eyebrow">Vad ingår?</span>
+          <h2>Allt du behöver är med</h2>
+          <ul class="checklist">
+            <li>Elektrisk enhjuling</li>
+            <li>Komplett skyddsutrustning (hjälm, knä-, armbågs- &amp; handledsskydd)</li>
+            <li>Vatten</li>
+            <li>100% av instruktörens tid – hela lektionen</li>
+            <li>Utomhusplats i Tullinge (exakt plats kommuniceras vid bokning)</li>
+          </ul>
+          <a href="#kontakt" class="btn btn--primary">Boka en lektion</a>
+        </div>
+
+        <!-- Included: Företag -->
+        <div class="included__text" data-mode="foretag">
           <span class="section__eyebrow">Vad ingår?</span>
           <h2>Allt ni behöver är med</h2>
           <ul class="checklist">
@@ -229,29 +371,44 @@
             <li>Komplett skyddsutrustning (hjälm, knä-, armbågs- &amp; handledsskydd)</li>
             <li>Professionell instruktör under hela sessionen</li>
             <li>Läsk, vatten och snacks</li>
-            <li>2 timmar dedikerad tid i lokal söder om Stockholm</li>
+            <li>2 timmar dedikerad tid söder om Stockholm</li>
             <li>Minnen för livet</li>
           </ul>
           <a href="#kontakt" class="btn btn--primary">Boka nu</a>
         </div>
+
         <div class="included__visual">
-          <div class="visual-card visual-card--1">
-            <i class="fi fi-rr-bolt icon-zap"></i>
+          <!-- Privat cards -->
+          <div class="visual-card visual-card--1" data-mode="privat">
+            <i class="fi fi-rr-bolt icon-zap" aria-hidden="true"></i>
+            <p>Elektrisk enhjuling</p>
+          </div>
+          <div class="visual-card visual-card--1" data-mode="foretag">
+            <i class="fi fi-rr-bolt icon-zap" aria-hidden="true"></i>
             <p>Elektrisk enhjuling</p>
           </div>
           <div class="visual-card visual-card--2">
-            <i class="fi fi-rr-shield icon-pulse"></i>
+            <i class="fi fi-rr-shield icon-pulse" aria-hidden="true"></i>
             <p>Skyddsutrustning</p>
           </div>
-          <div class="visual-card visual-card--3">
-            <i class="fi fi-rr-glass icon-float"></i>
+          <div class="visual-card visual-card--3" data-mode="privat">
+            <i class="fi fi-rr-glass icon-float" aria-hidden="true"></i>
+            <p>Vatten</p>
+          </div>
+          <div class="visual-card visual-card--3" data-mode="foretag">
+            <i class="fi fi-rr-glass icon-float" aria-hidden="true"></i>
             <p>Läsk &amp; snacks</p>
           </div>
-          <div class="visual-card visual-card--4">
-            <i class="fi fi-rr-diploma"></i>
+          <div class="visual-card visual-card--4" data-mode="privat">
+            <i class="fi fi-rr-user" aria-hidden="true"></i>
+            <p>1-mot-1 instruktör</p>
+          </div>
+          <div class="visual-card visual-card--4" data-mode="foretag">
+            <i class="fi fi-rr-diploma" aria-hidden="true"></i>
             <p>Instruktör</p>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -319,7 +476,50 @@
         <span class="section__eyebrow">Priser</span>
         <h2>Enkelt och transparent</h2>
       </div>
-      <div class="pricing">
+
+      <!-- Pricing: Privat -->
+      <div class="pricing" data-mode="privat">
+        <div class="pricing__card">
+          <div class="pricing__campaign-badge">Lanseringspris</div>
+          <div class="pricing__tag">Privatlektioner</div>
+          <div class="pricing__amount">
+            <div class="pricing__price-stack">
+              <span class="pricing__old-price">699 kr/h</span>
+              <div class="pricing__price-row">
+                <span class="pricing__price">499</span>
+                <span class="pricing__unit">kr / h</span>
+              </div>
+            </div>
+          </div>
+          <p class="pricing__vat">inkl. moms</p>
+          <div class="pricing__details">
+            <p>1 deltagare · 60 min · 1-mot-1</p>
+          </div>
+          <ul class="checklist checklist--dark">
+            <li>60 minuter</li>
+            <li>Elektrisk enhjuling &amp; skyddsutrustning</li>
+            <li>100% dedikerad instruktör</li>
+            <li>Vatten</li>
+            <li>Utomhusplats i Tullinge</li>
+          </ul>
+          <a href="#kontakt" class="btn btn--primary btn--full">Boka en lektion</a>
+        </div>
+        <div class="pricing__aside">
+          <h3>Vill du boka flera lektioner?</h3>
+          <p>
+            Hör av dig via formuläret så hittar vi ett upplägg som passar dig.
+            Fler lektioner ger snabbare progress och roligare körning.
+          </p>
+          <div class="pricing__rain-note">
+            <i class="fi fi-rr-cloud-rain" aria-hidden="true"></i>
+            <p>Vid regn ställs lektionen in och bokas om utan extra kostnad.</p>
+          </div>
+          <a href="#kontakt" class="btn btn--outline">Skicka en förfrågan</a>
+        </div>
+      </div>
+
+      <!-- Pricing: Företag -->
+      <div class="pricing" data-mode="foretag">
         <div class="pricing__card">
           <div class="pricing__tag">Företagsevent</div>
           <div class="pricing__amount">
@@ -348,6 +548,7 @@
           <a href="#kontakt" class="btn btn--outline">Skicka en förfrågan</a>
         </div>
       </div>
+
     </div>
   </section>
 
@@ -356,32 +557,50 @@
     <div class="container">
       <div class="section__header">
         <span class="section__eyebrow">Vanliga frågor</span>
-        <h2>Undrar ni något?</h2>
+        <h2>Undrar du något?</h2>
       </div>
       <div class="faq__list">
         <details class="faq__item">
           <summary>Behöver man ha tidigare erfarenhet?</summary>
-          <p>Nej, inga krav alls. Ni börjar från noll och det är precis det vi är vana vid. Ju mindre erfarenhet, desto roligare resa.</p>
+          <p>Nej, inga krav alls. Du börjar från noll och det är precis det vi är vana vid. Ju mindre erfarenhet, desto roligare resa.</p>
         </details>
         <details class="faq__item">
           <summary>Hur svårt är det egentligen?</summary>
-          <p>Svårt – på riktigt. De flesta klarar att röra sig självständigt inom sessionen men det kräver koncentration och lite mod. Det är hela grejen.</p>
+          <p>Svårt – på riktigt. De flesta klarar att röra sig självständigt under första sessionen men det kräver koncentration och lite mod. Det är hela grejen.</p>
         </details>
-        <details class="faq__item">
-          <summary>Vad händer om någon skadar sig?</summary>
-          <p>Säkerheten är vår prioritet. Alla deltagare bär fullständig skyddsutrustning och alla skriver på en ansvarsfriskrivning vid ankomst. Ömma muskler och enstaka blåmärken kan förekomma – liknande att lära sig skida eller rullskridskoåka.</p>
+
+        <!-- Privat-specific FAQ -->
+        <details class="faq__item" data-mode="privat">
+          <summary>Var håller ni till?</summary>
+          <p>Vi kör utomhus i Tullinge, söder om Stockholm. Exakt mötesplats kommuniceras när bokningen är bekräftad.</p>
         </details>
-        <details class="faq__item">
+        <details class="faq__item" data-mode="privat">
+          <summary>Vad händer om det regnar?</summary>
+          <p>Vi kör utomhus och vid regn ställer vi in lektionen och bokar om den utan extra kostnad. Vi håller dig uppdaterad om vädret inför planerat datum.</p>
+        </details>
+        <details class="faq__item" data-mode="privat">
+          <summary>Kan jag boka flera lektioner?</summary>
+          <p>Absolut, och det rekommenderas starkt! Varje lektion bygger på den förra. Hör av dig via formuläret så pratar vi om ett upplägg som passar dig.</p>
+        </details>
+
+        <!-- Foretag-specific FAQ -->
+        <details class="faq__item" data-mode="foretag">
           <summary>Var håller ni till?</summary>
           <p>Vi har för tillfället ingen permanent lokal utan säkrar upp lokaler som passar för aktiviteten löpande, söder om Stockholm. Exakt adress kommuniceras vid bokning.</p>
         </details>
+
+        <!-- Shared FAQ -->
         <details class="faq__item">
-          <summary>Vad ska man ha på sig?</summary>
-          <p>Bekväma kläder som tål lite rörelse och skor med bra stöd (ingen klackskor). Vi tillhandahåller resten.</p>
+          <summary>Vad händer om någon skadar sig?</summary>
+          <p>Säkerheten är vår prioritet. Alla bär fullständig skyddsutrustning och skriver på en ansvarsfriskrivning vid ankomst. Ömma muskler och enstaka blåmärken kan förekomma – liknande att lära sig skida eller rullskridskoåka.</p>
         </details>
         <details class="faq__item">
-          <summary>Hur bokar vi?</summary>
-          <p>Fyll i formuläret så hör vi av oss inom 24 timmar.</p>
+          <summary>Vad ska man ha på sig?</summary>
+          <p>Bekväma kläder som tål lite rörelse och skor med bra stöd (inga klackskor). Vi tillhandahåller resten.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Hur bokar jag?</summary>
+          <p>Fyll i formuläret nedan så hör vi av oss inom 24 timmar.</p>
         </details>
       </div>
     </div>
@@ -393,24 +612,33 @@
       <div class="kontakt__grid">
         <div class="kontakt__text">
           <span class="section__eyebrow">Kontakt</span>
-          <h2>Redo att boka?</h2>
-          <p>
+
+          <h2 data-mode="privat">Redo att boka en lektion?</h2>
+          <h2 data-mode="foretag">Redo att boka?</h2>
+
+          <p data-mode="privat">
+            Fyll i formuläret så hör jag av mig inom 24 timmar med lediga tider och all info du behöver.
+          </p>
+          <p data-mode="foretag">
             Vi kör oftast vardagar kl 17–19 — ni hinner avsluta arbetsdagen och boka ett middagsbord efteråt. Hör av dig så hittar vi ett datum som passar er.
           </p>
+
           <div class="kontakt__info">
-            <p><i class="fi fi-rr-marker"></i> Söder om Stockholm</p>
+            <p data-mode="privat"><i class="fi fi-rr-marker"></i> Tullinge, söder om Stockholm</p>
+            <p data-mode="foretag"><i class="fi fi-rr-marker"></i> Söder om Stockholm</p>
           </div>
         </div>
         <form class="form" id="contactForm">
           <input type="hidden" name="access_key" value="c8e50c54-6913-44a9-99f2-764868d9a5e9" />
           <input type="hidden" name="subject" value="Ny bokningsförfrågan – EUC Stockholm" />
+          <input type="hidden" name="booking_type" id="bookingType" value="Privatlektioner" />
           <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off" />
           <div class="form__row">
             <div class="form__group">
               <label for="name">Namn *</label>
               <input type="text" id="name" name="name" required placeholder="Ditt namn" />
             </div>
-            <div class="form__group">
+            <div class="form__group" id="companyGroup" data-mode="foretag">
               <label for="company">Företag</label>
               <input type="text" id="company" name="company" placeholder="Företagsnamn" />
             </div>
@@ -425,9 +653,9 @@
               <input type="tel" id="phone" name="phone" placeholder="070-000 00 00" />
             </div>
           </div>
-          <div class="form__group">
+          <div class="form__group" id="participantsGroup" data-mode="foretag">
             <label for="participants">Antal deltagare *</label>
-            <select id="participants" name="participants" required>
+            <select id="participants" name="participants">
               <option value="" disabled selected>Välj antal</option>
               <option value="4">4 personer</option>
               <option value="5">5 personer</option>
@@ -437,9 +665,9 @@
           </div>
           <div class="form__group">
             <label for="message">Meddelande</label>
-            <textarea id="message" name="message" rows="4" placeholder="Önskade datum, frågor, eller annat ni vill berätta…"></textarea>
+            <textarea id="message" name="message" rows="4" placeholder="Önskade datum, frågor, eller annat du vill berätta…"></textarea>
           </div>
-          <button type="submit" class="btn btn--primary btn--full btn--lg">Skicka bokningsförfrågan</button>
+          <button type="submit" class="btn btn--primary btn--full btn--lg" id="submitBtn">Skicka bokningsförfrågan</button>
           <p id="formResult" class="form__result" aria-live="polite"></p>
           <p class="form__disclaimer">
             Alla deltagare signerar en ansvarsfriskrivning vid ankomst.
@@ -455,7 +683,7 @@
     <div class="modal__box">
       <div class="modal__icon">✓</div>
       <h3 id="modalTitle">Tack för din förfrågan!</h3>
-      <p>Vi hör av oss inom 24 timmar med lediga datum och all info ni behöver.</p>
+      <p>Vi hör av oss inom 24 timmar med lediga tider och all info du behöver.</p>
       <button class="btn btn--primary" id="modalClose">Stäng</button>
     </div>
   </div>
@@ -465,7 +693,7 @@
     <div class="container footer__inner">
       <div class="footer__brand">
         <span class="nav__logo">EUC Stockholm</span>
-        <p>Teambuilding med elektrisk enhjuling – söder om Stockholm.</p>
+        <p>Privatlektioner &amp; teambuilding med elektrisk enhjuling.</p>
       </div>
       <div class="footer__links">
         <a href="#om">Om upplevelsen</a>
