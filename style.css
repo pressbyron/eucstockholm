@@ -720,6 +720,93 @@ p  { color: var(--c-muted); }
   .stat-val { font-size: 1.2rem; }
 }
 
+/* ---------- Mode tabs ---------- */
+.mode-tabs {
+  display: flex;
+  gap: 4px;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: 9999px;
+  padding: 4px;
+  width: fit-content;
+  margin-bottom: 28px;
+}
+.mode-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 22px;
+  border-radius: 9999px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  color: var(--c-muted);
+  transition: background var(--transition), color var(--transition);
+  white-space: nowrap;
+}
+.mode-tab i { font-size: 0.85rem; }
+.mode-tab.active {
+  background: var(--c-accent);
+  color: var(--c-bg);
+}
+.mode-tab:hover:not(.active) { color: var(--c-text); }
+
+/* ---------- Mode visibility ---------- */
+body[data-mode="privat"] [data-mode="foretag"] { display: none !important; }
+body[data-mode="foretag"] [data-mode="privat"] { display: none !important; }
+
+/* ---------- Campaign pricing ---------- */
+.pricing__campaign-badge {
+  display: inline-block;
+  background: #e63946;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  margin-bottom: 10px;
+}
+.pricing__price-stack { display: flex; flex-direction: column; gap: 2px; }
+.pricing__old-price {
+  font-size: 1.15rem;
+  color: var(--c-muted);
+  text-decoration: line-through;
+  font-weight: 500;
+  line-height: 1;
+}
+.pricing__price-row { display: flex; align-items: baseline; gap: 8px; }
+
+/* Stats bar campaign price */
+.campaign-price {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+.stat-old {
+  font-size: 1rem;
+  color: var(--c-muted);
+  text-decoration: line-through;
+  font-weight: 400;
+  font-family: var(--font);
+}
+
+/* Rain note in pricing aside */
+.pricing__rain-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+}
+.pricing__rain-note i { color: var(--c-accent); flex-shrink: 0; margin-top: 2px; }
+.pricing__rain-note p { font-size: 0.82rem; margin: 0; line-height: 1.5; }
+
 /* ---------- Scroll fade-in ---------- */
 .fade-up {
   opacity: 0;

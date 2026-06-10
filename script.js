@@ -17,13 +17,44 @@ burger.addEventListener('click', () => {
   burger.setAttribute('aria-expanded', open);
 });
 
-// Close mobile menu on link click
 mobileMenu.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     mobileMenu.classList.remove('open');
     burger.setAttribute('aria-expanded', false);
   });
 });
+
+// ----- Mode tabs -----
+const modeTabs = document.querySelectorAll('.mode-tab');
+const bookingTypeInput = document.getElementById('bookingType');
+const companyGroup = document.getElementById('companyGroup');
+const participantsGroup = document.getElementById('participantsGroup');
+const participantsSelect = document.getElementById('participants');
+const submitBtn = document.getElementById('submitBtn');
+
+function setMode(mode) {
+  document.body.dataset.mode = mode;
+
+  modeTabs.forEach(btn => {
+    const active = btn.dataset.tab === mode;
+    btn.classList.toggle('active', active);
+    btn.setAttribute('aria-selected', active);
+  });
+
+  bookingTypeInput.value = mode === 'privat' ? 'Privatlektioner' : 'Företagsevent';
+
+  // Participants field is required only for company bookings
+  if (participantsSelect) {
+    participantsSelect.required = mode === 'foretag';
+  }
+}
+
+modeTabs.forEach(btn => {
+  btn.addEventListener('click', () => setMode(btn.dataset.tab));
+});
+
+// Default: private lessons
+setMode('privat');
 
 // ----- Scroll fade-in -----
 const observer = new IntersectionObserver(
@@ -46,11 +77,10 @@ document.querySelectorAll(
 // ----- Contact form → Web3Forms -----
 const CONTACT_EMAIL = 'peter.jaaskelainen@gmail.com';
 
-const form        = document.getElementById('contactForm');
-const submitBtn   = form.querySelector('[type="submit"]');
-const formResult  = document.getElementById('formResult');
-const modal       = document.getElementById('successModal');
-const modalClose  = document.getElementById('modalClose');
+const form       = document.getElementById('contactForm');
+const formResult = document.getElementById('formResult');
+const modal      = document.getElementById('successModal');
+const modalClose = document.getElementById('modalClose');
 
 function openModal() {
   modal.hidden = false;
@@ -58,7 +88,6 @@ function openModal() {
 }
 function closeModal() {
   modal.hidden = true;
-  submitBtn.focus();
 }
 
 modalClose.addEventListener('click', closeModal);
