@@ -245,7 +245,8 @@ p  { color: var(--c-muted); }
   background: var(--c-surface);
   border: 1px solid var(--c-border);
 }
-.hero__img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+.hero__img-wrap img,
+.hero__img-wrap video { width: 100%; height: 100%; object-fit: cover; }
 .hero__img-placeholder {
   width: 100%;
   height: 100%;
