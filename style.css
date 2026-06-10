@@ -781,6 +781,22 @@ body[data-mode="foretag"] [data-mode="privat"] { display: none !important; }
 .pricing__price-row { display: flex; align-items: baseline; gap: 8px; }
 
 /* Stats bar campaign price */
+.stat-item--campaign { position: relative; }
+.stat-campaign-badge {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  background: #e63946;
+  color: #fff;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 0 var(--radius) 0 var(--radius);
+  white-space: nowrap;
+  line-height: 1.6;
+}
 .campaign-price {
   display: flex;
   align-items: baseline;
