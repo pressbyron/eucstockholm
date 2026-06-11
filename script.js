@@ -26,27 +26,14 @@ mobileMenu.querySelectorAll('a').forEach(link => {
 
 // ----- Mode tabs -----
 const modeTabs = document.querySelectorAll('.mode-tab');
-const bookingTypeInput = document.getElementById('bookingType');
-const companyGroup = document.getElementById('companyGroup');
-const participantsGroup = document.getElementById('participantsGroup');
-const participantsSelect = document.getElementById('participants');
-const submitBtn = document.getElementById('submitBtn');
 
 function setMode(mode) {
   document.body.dataset.mode = mode;
-
   modeTabs.forEach(btn => {
     const active = btn.dataset.tab === mode;
     btn.classList.toggle('active', active);
     btn.setAttribute('aria-selected', active);
   });
-
-  bookingTypeInput.value = mode === 'privat' ? 'Privatlektioner' : 'Företagsevent';
-
-  // Participants field is required only for company bookings
-  if (participantsSelect) {
-    participantsSelect.required = mode === 'foretag';
-  }
 }
 
 modeTabs.forEach(btn => {
