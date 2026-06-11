@@ -591,6 +591,17 @@ p  { color: var(--c-muted); }
   overflow: hidden;
   border: 1px solid var(--c-border);
 }
+.calendly-swish-note {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: var(--c-bg3);
+  border-bottom: 1px solid var(--c-border);
+  font-size: 0.85rem;
+  color: var(--c-muted);
+}
+.calendly-swish-note i { color: var(--c-accent); flex-shrink: 0; }
 .calendly-inline-widget {
   min-width: 100%;
   height: 800px;
