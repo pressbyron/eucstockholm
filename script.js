@@ -61,6 +61,14 @@ document.querySelectorAll(
   observer.observe(el);
 });
 
+// ----- Calendly auto-resize -----
+window.addEventListener('message', e => {
+  if (e.data.event === 'calendly.page_height') {
+    const widget = document.querySelector('.calendly-inline-widget');
+    if (widget) widget.style.height = e.data.payload.height + 'px';
+  }
+});
+
 // ----- Contact form → Web3Forms -----
 const CONTACT_EMAIL = 'peter.jaaskelainen@gmail.com';
 
