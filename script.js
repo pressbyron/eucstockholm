@@ -47,6 +47,12 @@ function setMode(mode) {
   if (participantsSelect) {
     participantsSelect.required = mode === 'foretag';
   }
+
+  // Risk checkbox is required only for private bookings
+  const riskCheckbox = document.getElementById('riskCheckbox');
+  if (riskCheckbox) {
+    riskCheckbox.required = mode === 'privat';
+  }
 }
 
 modeTabs.forEach(btn => {

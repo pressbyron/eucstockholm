@@ -779,6 +779,12 @@
             <label for="message">Meddelande</label>
             <textarea id="message" name="message" rows="4" placeholder="Önskade datum, frågor, eller annat du vill berätta…"></textarea>
           </div>
+          <div class="form__group form__group--checkbox" data-mode="privat">
+            <label class="checkbox-label">
+              <input type="checkbox" name="risk_acknowledged" id="riskCheckbox" value="Ja" required />
+              <span>Jag förstår att EUC-körning innebär en fysisk risk och kan ge ömhet och blåmärken. Jag accepterar detta och deltar på eget ansvar. *</span>
+            </label>
+          </div>
           <button type="submit" class="btn btn--primary btn--full btn--lg" id="submitBtn">Skicka bokningsförfrågan</button>
           <p id="formResult" class="form__result" aria-live="polite"></p>
           <p class="form__disclaimer">
