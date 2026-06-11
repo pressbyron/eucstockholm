@@ -765,9 +765,9 @@ p  { color: var(--c-muted); }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
-  .hero__content { grid-template-columns: 1fr; gap: 32px; }
-  .hero__right { display: flex; justify-content: center; }
-  .hero__img-wrap { max-height: 55vw; }
+  .hero__content { gap: 24px; }
+  .hero__right { justify-content: flex-end; }
+  .hero__img-wrap { max-height: 55vh; }
   .included__grid { grid-template-columns: 1fr; gap: 40px; }
   .included__visual { order: -1; }
   .pricing { grid-template-columns: 1fr; max-width: 480px; }
