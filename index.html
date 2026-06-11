@@ -729,7 +729,7 @@
           <h2 data-mode="foretag">Redo att boka?</h2>
 
           <p data-mode="privat">
-            Fyll i formuläret så hör jag av mig inom 24 timmar med lediga tider och all info du behöver.
+            Välj en tid som passar dig – du får en bekräftelse direkt via e-post.
           </p>
           <p data-mode="foretag">
             Vi kör oftast vardagar kl 17–19 — ni hinner avsluta arbetsdagen och boka ett middagsbord efteråt. Hör av dig så hittar vi ett datum som passar er.
@@ -740,17 +740,27 @@
             <p data-mode="foretag"><i class="fi fi-rr-marker"></i> Söder om Stockholm</p>
           </div>
         </div>
-        <form class="form" id="contactForm">
+
+        <!-- Calendly embed: Privat -->
+        <div class="calendly-wrap" data-mode="privat">
+          <div
+            class="calendly-inline-widget"
+            data-url="https://calendly.com/peter-jaaskelainen/euc-privatlektion-60-min?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=1a1a20&text_color=ededf5&primary_color=f0e000"
+          ></div>
+          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        </div>
+
+        <!-- Contact form: Företag -->
+        <form class="form" id="contactForm" data-mode="foretag">
           <input type="hidden" name="access_key" value="c8e50c54-6913-44a9-99f2-764868d9a5e9" />
-          <input type="hidden" name="subject" value="Ny bokningsförfrågan – EUC Stockholm" />
-          <input type="hidden" name="booking_type" id="bookingType" value="Privatlektioner" />
+          <input type="hidden" name="subject" value="Ny bokningsförfrågan – EUC Stockholm (Företag)" />
           <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off" />
           <div class="form__row">
             <div class="form__group">
               <label for="name">Namn *</label>
               <input type="text" id="name" name="name" required placeholder="Ditt namn" />
             </div>
-            <div class="form__group" id="companyGroup" data-mode="foretag">
+            <div class="form__group">
               <label for="company">Företag</label>
               <input type="text" id="company" name="company" placeholder="Företagsnamn" />
             </div>
@@ -765,9 +775,9 @@
               <input type="tel" id="phone" name="phone" placeholder="070-000 00 00" />
             </div>
           </div>
-          <div class="form__group" id="participantsGroup" data-mode="foretag">
+          <div class="form__group">
             <label for="participants">Antal deltagare *</label>
-            <select id="participants" name="participants">
+            <select id="participants" name="participants" required>
               <option value="" disabled selected>Välj antal</option>
               <option value="4">4 personer</option>
               <option value="5">5 personer</option>
@@ -777,18 +787,12 @@
           </div>
           <div class="form__group">
             <label for="message">Meddelande</label>
-            <textarea id="message" name="message" rows="4" placeholder="Önskade datum, frågor, eller annat du vill berätta…"></textarea>
-          </div>
-          <div class="form__group form__group--checkbox" data-mode="privat">
-            <label class="checkbox-label">
-              <input type="checkbox" name="risk_acknowledged" id="riskCheckbox" value="Ja" required />
-              <span>Jag förstår att EUC-körning innebär en fysisk risk och kan ge ömhet och blåmärken. Jag accepterar detta och deltar på eget ansvar. *</span>
-            </label>
+            <textarea id="message" name="message" rows="4" placeholder="Önskade datum, frågor, eller annat ni vill berätta…"></textarea>
           </div>
           <button type="submit" class="btn btn--primary btn--full btn--lg" id="submitBtn">Skicka bokningsförfrågan</button>
           <p id="formResult" class="form__result" aria-live="polite"></p>
           <p class="form__disclaimer">
-            Alla deltagare signerar en ansvarsfriskrivning vid ankomst. Åldersgräns 18 år – giltig legitimation krävs.
+            Alla deltagare signerar en ansvarsfriskrivning vid ankomst.
           </p>
         </form>
       </div>
