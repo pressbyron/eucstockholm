@@ -765,9 +765,9 @@ p  { color: var(--c-muted); }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
-  .hero__content { gap: 24px; }
+  .hero__content { gap: 16px; grid-template-columns: 1fr 1fr; }
   .hero__right { justify-content: flex-end; }
-  .hero__img-wrap { max-height: 55vh; }
+  .hero__img-wrap { max-height: 60vh; width: auto; }
   .included__grid { grid-template-columns: 1fr; gap: 40px; }
   .included__visual { order: -1; }
   .pricing { grid-template-columns: 1fr; max-width: 480px; }
