@@ -855,14 +855,11 @@ p  { color: var(--c-muted); }
     align-items: center;
   }
 
-  /* Tabs stick just below the nav */
+  /* Tabs flow naturally in hero — no fixed positioning (clashes with venue banner) */
   .mode-tabs {
-    position: fixed;
-    top: 68px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 95;
-    margin-bottom: 0;
+    position: static;
+    transform: none;
+    margin-bottom: 24px;
     box-shadow: 0 4px 16px rgba(0,0,0,0.4);
   }
 
@@ -880,10 +877,17 @@ p  { color: var(--c-muted); }
     text-shadow: 0 1px 8px rgba(0,0,0,0.8);
   }
 
-  /* Hide secondary button — single clear CTA */
-  .hero__actions .btn--ghost { display: none; }
-
-  .hero__actions { justify-content: center; flex-wrap: wrap; }
+  /* Show Läs mer as a small text link below the main CTA */
+  .hero__actions .btn--ghost {
+    display: inline-flex;
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.7);
+    font-size: 0.85rem;
+    padding: 8px 16px;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.6);
+  }
+  .hero__actions { justify-content: center; flex-wrap: wrap; flex-direction: column; align-items: center; gap: 4px; }
   .stats-bar { justify-content: center; flex-wrap: wrap; width: 100%; max-width: 480px; }
 
   .section { padding: 72px 0; }
