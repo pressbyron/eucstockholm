@@ -854,6 +854,14 @@ p  { color: var(--c-muted); }
     text-align: center;
     align-items: center;
   }
+  .hero__sub {
+    background: rgba(11, 11, 14, 0.6);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-radius: 10px;
+    padding: 12px 16px;
+    color: var(--c-text);
+  }
   .hero__actions { justify-content: center; flex-wrap: wrap; }
   .stats-bar { justify-content: center; flex-wrap: wrap; width: 100%; max-width: 480px; }
 
