@@ -631,9 +631,6 @@ p  { color: var(--c-muted); }
   overflow: hidden;
   border: 1px solid var(--c-border);
 }
-#my-cal-inline-60min {
-  min-height: 700px;
-}
 .calendly-swish-note {
   display: flex;
   align-items: center;
