@@ -528,6 +528,7 @@ p  { color: var(--c-muted); }
 /* ---------- Pricing ---------- */
 .pris { background: var(--c-bg); }
 .pricing { display: grid; grid-template-columns: 1fr 380px; gap: 32px; align-items: start; max-width: 900px; margin: 0 auto; }
+[data-mode="privat"] .pricing { grid-template-columns: 1fr; max-width: 520px; }
 .pricing__card {
   background: var(--c-surface);
   border: 1px solid var(--c-accent);
@@ -999,6 +1000,25 @@ body[data-mode="foretag"] [data-mode="privat"] { display: none !important; }
 }
 
 /* Rain note in pricing aside */
+.pricing__footnotes {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--c-border);
+}
+.pricing__footnotes p {
+  font-size: 0.82rem;
+  color: var(--c-muted);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.pricing__footnotes i { color: var(--c-accent); flex-shrink: 0; }
+.pricing__footnotes strong { color: var(--c-text); }
+
 .pricing__rain-note {
   display: flex;
   align-items: flex-start;
